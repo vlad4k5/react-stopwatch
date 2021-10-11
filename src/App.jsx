@@ -47,7 +47,6 @@ const App = () => {
   }, [isClicked])
  
   return <div className="appContainer">
-    <div>
 
       <div className="timer"> {new Date(seconds).toISOString().slice(11, 19)}</div>
 
@@ -59,7 +58,6 @@ const App = () => {
         <button className="resetButton" onClick={onClickResetButton}>Reset</button>
       </div>
       
-    </div>
   </div>
 }
 export default App
