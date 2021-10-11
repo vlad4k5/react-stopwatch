@@ -1,0 +1,65 @@
+@mixin button($color) {
+  border: none;
+  white-space: nowrap;
+  cursor: pointer;
+  padding: 20px 50px;
+  background-color: $color;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 25px;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: darken($color, 10%);
+  }
+
+  @media screen and (max-width: 600px) {
+    padding: 15px 40px;
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 12px 25px;
+  }
+}
+
+.appContainer {
+  box-sizing: border-box;
+  padding-top: 200px;
+  height: 100vh;
+  background-color: #282c34;
+  text-align: center;
+}
+
+.timer {
+  text-align: center;
+  color: #fff;
+  font-size: 80px;
+}
+
+.buttons {
+  margin-top: 100px;
+  display: inline-flex;
+  gap: 50px;
+
+  @media screen and (max-width: 600px) {
+    gap: 25px;
+  }
+
+  @media screen and (max-width: 450px) {
+    gap: 10px;
+  }
+}
+
+.startButton {
+  @include button(#01996d);
+}
+
+.stopButton,
+.resetButton {
+  @include button(#ed565e);
+}
+
+.waitButton {
+  @include button(#fac260);
+}
